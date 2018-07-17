@@ -29,16 +29,16 @@ for e, line in enumerate( open(data_file) ):
 		continue
 	
 	else :	
-		 	# si la date de la ligne est dans la marge 
-			# print line.split(",")[10] 
-			delta= a - datetime.strptime(line.split(",")[6], date_format)
-			if ( delta.days > 0 ) : 
-				i+=1
-				if ( i % 1000000 == 0 ) : 
-					print str(i) 
-				#print line.split(",")[6]
-				#c.writerow([line.split(",")[0],line.split(",")[6],line.split(",")[10],line.split(",")[1]])
-				c.writerow([line.split(",")[0],line.split(",")[6],line.split(",")[10],","])
+		# si la date de la ligne est dans la marge 
+		# print line.split(",")[10] 
+		delta= a - datetime.strptime(line.split(",")[6], date_format)
+		if ( delta.days > 0 ) : 
+			i+=1
+			if ( i % 1000000 == 0 ) : 
+				print str(i) 
+			#print line.split(",")[6]
+			#c.writerow([line.split(",")[0],line.split(",")[6],line.split(",")[10],line.split(",")[1]])
+			c.writerow([line.split(",")[0],line.split(",")[6],line.split(",")[10],","])
 			
 
 		
